@@ -15,20 +15,29 @@ export async function OPTIONS() {
 
 export async function POST(req: Request) {
   const origin = req.headers.get("origin");
-  const referer = req.headers.get("referer")
-  // console.log(origin)
+  const referer = req.headers.get("referer");
 
-  if (origin !== "https://user-zenpay-payments.vercel.app") {
+  const allowedOrigins = [
+    "https://user-zenpay-payments.vercel.app",
+    "http://localhost:3000"
+  ];
+
+  const currentOrigin = origin || "http://localhost:3000";
+
+  if (!allowedOrigins.includes(currentOrigin)) {
     return new NextResponse(JSON.stringify({ error: "CORS: Origin not allowed" }), {
       status: 403,
-      headers: corsHeaders()
+      headers: corsHeaders(currentOrigin)
     });
   }
 
-  if (!referer?.startsWith(`https://user-zenpay-payments.vercel.app/`)) {
+  if (
+    !referer?.startsWith("https://user-zenpay-payments.vercel.app/") &&
+    !referer?.startsWith("http://localhost:3000/")
+  ) {
     return new NextResponse(JSON.stringify({ error: "Invalid referer path" }), {
       status: 403,
-      headers: corsHeaders()
+      headers: corsHeaders(currentOrigin)
     });
   }
 
@@ -47,11 +56,12 @@ export async function POST(req: Request) {
     });
 
     if (!isExistingUser || !isExistingUser.accounts.some(acc =>
-        acc.accountNumber === accountNumber && acc.ifsc === ifsc
-      )) {
+      acc.accountNumber === accountNumber && acc.ifsc === ifsc
+    )) {
       return new NextResponse(
         JSON.stringify({ msg: "User doesn't have this account or incorrect details!", token: null }),
-        { status: 400, 
+        {
+          status: 400,
           headers: corsHeaders()
         }
       );
@@ -79,8 +89,9 @@ export async function POST(req: Request) {
 
     return new NextResponse(
       JSON.stringify({ msg: "Correct details", token: token }),
-      { status: 200, 
-        headers: corsHeaders()
+      {
+        status: 200,
+        headers: corsHeaders(currentOrigin)
       }
     );
 
@@ -88,18 +99,18 @@ export async function POST(req: Request) {
     console.error(err);
     return new NextResponse(
       JSON.stringify({ error: "Something went wrong!" }),
-      { status: 500, 
-        headers: corsHeaders()
+      {
+        status: 500,
+        headers: corsHeaders(currentOrigin)
       }
     );
   }
 }
 
-function corsHeaders() {
+function corsHeaders(origin: string = "http://localhost:3000") {
   return {
-    "Access-Control-Allow-Origin": "https://user-zenpay-payments.vercel.app",
+    "Access-Control-Allow-Origin": origin,
     "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
-    // "Access-Control-Allow-Credentials": "true"
   };
 }

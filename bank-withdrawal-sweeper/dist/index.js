@@ -6,7 +6,11 @@ var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __commonJS = (cb, mod) => function __require() {
-  return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
+  try {
+    return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
+  } catch (e) {
+    throw mod = 0, e;
+  }
 };
 var __export = (target, all) => {
   for (var name in all)
@@ -2081,7 +2085,7 @@ var require_LMPOP = __commonJS({
 var require_BLMPOP = __commonJS({
   "node_modules/@redis/client/dist/lib/commands/BLMPOP.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -2090,13 +2094,13 @@ var require_BLMPOP = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -2264,7 +2268,7 @@ var require_ZMPOP = __commonJS({
 var require_BZMPOP = __commonJS({
   "node_modules/@redis/client/dist/lib/commands/BZMPOP.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -2273,13 +2277,13 @@ var require_BZMPOP = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -3835,7 +3839,7 @@ var require_EVAL = __commonJS({
 var require_EVAL_RO = __commonJS({
   "node_modules/@redis/client/dist/lib/commands/EVAL_RO.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -3844,13 +3848,13 @@ var require_EVAL_RO = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -3885,7 +3889,7 @@ var require_EVAL_RO = __commonJS({
 var require_EVALSHA_RO = __commonJS({
   "node_modules/@redis/client/dist/lib/commands/EVALSHA_RO.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -3894,13 +3898,13 @@ var require_EVALSHA_RO = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -3935,7 +3939,7 @@ var require_EVALSHA_RO = __commonJS({
 var require_EVALSHA = __commonJS({
   "node_modules/@redis/client/dist/lib/commands/EVALSHA.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -3944,13 +3948,13 @@ var require_EVALSHA = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -4264,7 +4268,7 @@ var require_GEOSEARCH_WITH = __commonJS({
 var require_GEORADIUS_WITH = __commonJS({
   "node_modules/@redis/client/dist/lib/commands/GEORADIUS_WITH.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -4273,13 +4277,13 @@ var require_GEORADIUS_WITH = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -4361,7 +4365,7 @@ var require_GEORADIUS_RO_WITH = __commonJS({
 var require_GEORADIUS_RO = __commonJS({
   "node_modules/@redis/client/dist/lib/commands/GEORADIUS_RO.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -4370,13 +4374,13 @@ var require_GEORADIUS_RO = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -4415,7 +4419,7 @@ var require_GEORADIUS_RO = __commonJS({
 var require_GEORADIUS_STORE = __commonJS({
   "node_modules/@redis/client/dist/lib/commands/GEORADIUS_STORE.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -4424,13 +4428,13 @@ var require_GEORADIUS_STORE = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -4550,7 +4554,7 @@ var require_GEORADIUSBYMEMBER_WITH = __commonJS({
 var require_GEORADIUSBYMEMBER_RO_WITH = __commonJS({
   "node_modules/@redis/client/dist/lib/commands/GEORADIUSBYMEMBER_RO_WITH.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -4559,13 +4563,13 @@ var require_GEORADIUSBYMEMBER_RO_WITH = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -4605,7 +4609,7 @@ var require_GEORADIUSBYMEMBER_RO_WITH = __commonJS({
 var require_GEORADIUSBYMEMBER_RO = __commonJS({
   "node_modules/@redis/client/dist/lib/commands/GEORADIUSBYMEMBER_RO.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -4614,13 +4618,13 @@ var require_GEORADIUSBYMEMBER_RO = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -4660,7 +4664,7 @@ var require_GEORADIUSBYMEMBER_RO = __commonJS({
 var require_GEORADIUSBYMEMBER_STORE = __commonJS({
   "node_modules/@redis/client/dist/lib/commands/GEORADIUSBYMEMBER_STORE.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -4669,13 +4673,13 @@ var require_GEORADIUSBYMEMBER_STORE = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -5069,7 +5073,7 @@ var require_FLUSHDB = __commonJS({
 var require_FCALL = __commonJS({
   "node_modules/@redis/client/dist/lib/commands/FCALL.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -5078,13 +5082,13 @@ var require_FCALL = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -5119,7 +5123,7 @@ var require_FCALL = __commonJS({
 var require_FCALL_RO = __commonJS({
   "node_modules/@redis/client/dist/lib/commands/FCALL_RO.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -5128,13 +5132,13 @@ var require_FCALL_RO = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -9097,7 +9101,7 @@ var require_SORT = __commonJS({
 var require_SORT_RO = __commonJS({
   "node_modules/@redis/client/dist/lib/commands/SORT_RO.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -9106,13 +9110,13 @@ var require_SORT_RO = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -10490,7 +10494,7 @@ var require_XREADGROUP = __commonJS({
 var require_XREVRANGE = __commonJS({
   "node_modules/@redis/client/dist/lib/commands/XREVRANGE.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -10499,13 +10503,13 @@ var require_XREVRANGE = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -14431,7 +14435,7 @@ var require_commands_queue = __commonJS({
       #setupPubSubHandler() {
         if (this.#respVersion !== 2)
           return;
-        this.decoder.onReply = (reply) => {
+        this.decoder.onReply = ((reply) => {
           if (Array.isArray(reply)) {
             if (this.#onPush(reply))
               return;
@@ -14442,7 +14446,7 @@ var require_commands_queue = __commonJS({
             }
           }
           return this.#onReply(reply);
-        };
+        });
         this.decoder.getTypeMapping = () => RESP2_PUSH_TYPE_MAPPING;
       }
       subscribe(type, channels, listener, returnBuffers) {
@@ -14453,7 +14457,7 @@ var require_commands_queue = __commonJS({
         return this.#addPubSubCommand(command);
       }
       #resetDecoderCallbacks() {
-        this.decoder.onReply = (reply) => this.#onReply(reply);
+        this.decoder.onReply = ((reply) => this.#onReply(reply));
         this.decoder.getTypeMapping = () => this.#getTypeMapping();
       }
       unsubscribe(type, channels, listener, returnBuffers) {
@@ -14527,7 +14531,7 @@ var require_commands_queue = __commonJS({
       async reset(chainId, typeMapping) {
         return new Promise((resolve, reject) => {
           this.#resetFallbackOnReply = this.decoder.onReply;
-          this.decoder.onReply = (reply) => {
+          this.decoder.onReply = ((reply) => {
             if (typeof reply === "string" && reply === "RESET" || reply instanceof Buffer && RESET.equals(reply)) {
               this.#resetDecoderCallbacks();
               this.#resetFallbackOnReply = void 0;
@@ -14536,7 +14540,7 @@ var require_commands_queue = __commonJS({
               return;
             }
             this.#resetFallbackOnReply(reply);
-          };
+          });
           this.#toWrite.push({
             args: ["RESET"],
             chainId,
@@ -16319,7 +16323,7 @@ var require_client = __commonJS({
       }
       #initiateSocket() {
         const socketInitiator = async () => {
-          const promises = [], chainId = Symbol("Socket Initiator");
+          const promises = [], chainId = /* @__PURE__ */ Symbol("Socket Initiator");
           const resubscribePromise = this.#queue.resubscribe(chainId);
           if (resubscribePromise) {
             promises.push(resubscribePromise);
@@ -16551,7 +16555,7 @@ var require_client = __commonJS({
         if (!this._self.#socket.isOpen) {
           return Promise.reject(new errors_1.ClientClosedError());
         }
-        const chainId = Symbol("Pipeline Chain"), promise = Promise.all(commands.map(({ args }) => this._self.#queue.addCommand(args, {
+        const chainId = /* @__PURE__ */ Symbol("Pipeline Chain"), promise = Promise.all(commands.map(({ args }) => this._self.#queue.addCommand(args, {
           chainId,
           typeMapping: this._commandOptions?.typeMapping
         })));
@@ -16580,7 +16584,7 @@ var require_client = __commonJS({
           throw new errors_1.WatchError("Client reconnected after WATCH");
         }
         const typeMapping = this._commandOptions?.typeMapping;
-        const chainId = Symbol("MULTI Chain");
+        const chainId = /* @__PURE__ */ Symbol("MULTI Chain");
         const promises = [
           this._self.#queue.addCommand(["MULTI"], { chainId })
         ];
@@ -16666,7 +16670,7 @@ var require_client = __commonJS({
        * Reset the client to its default state (i.e. stop PubSub, stop monitoring, select default DB, etc.)
        */
       async reset() {
-        const chainId = Symbol("Reset Chain"), promises = [this._self.#queue.reset(chainId)], selectedDB = this._self.#options?.database ?? 0;
+        const chainId = /* @__PURE__ */ Symbol("Reset Chain"), promises = [this._self.#queue.reset(chainId)], selectedDB = this._self.#options?.database ?? 0;
         this._self.#credentialsSubscription?.dispose();
         this._self.#credentialsSubscription = null;
         promises.push(...await this._self.#handshake(chainId, false));
@@ -17799,7 +17803,7 @@ var require_cluster = __commonJS({
       // }
       _handleAsk(fn) {
         return async (client, options) => {
-          const chainId = Symbol("asking chain");
+          const chainId = /* @__PURE__ */ Symbol("asking chain");
           const opts = options ? { ...options } : {};
           opts.chainId = chainId;
           const ret = await Promise.all([
@@ -19615,7 +19619,7 @@ var require_sentinel = __commonJS({
 var require_dist = __commonJS({
   "node_modules/@redis/client/dist/index.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -19624,10 +19628,10 @@ var require_dist = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
+    }));
     var __exportStar = exports2 && exports2.__exportStar || function(m, exports3) {
       for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports3, p)) __createBinding(exports3, m, p);
     };
@@ -19987,7 +19991,7 @@ var require_SCANDUMP = __commonJS({
 var require_bloom = __commonJS({
   "node_modules/@redis/bloom/dist/lib/commands/bloom/index.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -19996,10 +20000,10 @@ var require_bloom = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
+    }));
     var __exportStar = exports2 && exports2.__exportStar || function(m, exports3) {
       for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports3, p)) __createBinding(exports3, m, p);
     };
@@ -20430,7 +20434,7 @@ var require_INSERT2 = __commonJS({
 var require_INSERTNX = __commonJS({
   "node_modules/@redis/bloom/dist/lib/commands/cuckoo/INSERTNX.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -20439,13 +20443,13 @@ var require_INSERTNX = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -20664,7 +20668,7 @@ var require_BYRANK = __commonJS({
 var require_BYREVRANK = __commonJS({
   "node_modules/@redis/bloom/dist/lib/commands/t-digest/BYREVRANK.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -20673,13 +20677,13 @@ var require_BYREVRANK = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -20940,7 +20944,7 @@ var require_RESET = __commonJS({
 var require_REVRANK = __commonJS({
   "node_modules/@redis/bloom/dist/lib/commands/t-digest/REVRANK.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -20949,13 +20953,13 @@ var require_REVRANK = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -23294,7 +23298,7 @@ var require_INFO7 = __commonJS({
 var require_PROFILE_SEARCH = __commonJS({
   "node_modules/@redis/search/dist/lib/commands/PROFILE_SEARCH.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -23303,13 +23307,13 @@ var require_PROFILE_SEARCH = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -23361,7 +23365,7 @@ var require_PROFILE_SEARCH = __commonJS({
 var require_PROFILE_AGGREGATE = __commonJS({
   "node_modules/@redis/search/dist/lib/commands/PROFILE_AGGREGATE.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -23370,13 +23374,13 @@ var require_PROFILE_AGGREGATE = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -24444,7 +24448,7 @@ var require_INCRBY4 = __commonJS({
 var require_DECRBY2 = __commonJS({
   "node_modules/@redis/time-series/dist/lib/commands/DECRBY.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -24453,13 +24457,13 @@ var require_DECRBY2 = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -25260,7 +25264,7 @@ var require_MRANGE = __commonJS({
 var require_MREVRANGE_GROUPBY = __commonJS({
   "node_modules/@redis/time-series/dist/lib/commands/MREVRANGE_GROUPBY.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -25269,13 +25273,13 @@ var require_MREVRANGE_GROUPBY = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -25310,7 +25314,7 @@ var require_MREVRANGE_GROUPBY = __commonJS({
 var require_MREVRANGE_SELECTED_LABELS_GROUPBY = __commonJS({
   "node_modules/@redis/time-series/dist/lib/commands/MREVRANGE_SELECTED_LABELS_GROUPBY.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -25319,13 +25323,13 @@ var require_MREVRANGE_SELECTED_LABELS_GROUPBY = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -25361,7 +25365,7 @@ var require_MREVRANGE_SELECTED_LABELS_GROUPBY = __commonJS({
 var require_MREVRANGE_SELECTED_LABELS = __commonJS({
   "node_modules/@redis/time-series/dist/lib/commands/MREVRANGE_SELECTED_LABELS.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -25370,13 +25374,13 @@ var require_MREVRANGE_SELECTED_LABELS = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -25411,7 +25415,7 @@ var require_MREVRANGE_SELECTED_LABELS = __commonJS({
 var require_MREVRANGE_WITHLABELS_GROUPBY = __commonJS({
   "node_modules/@redis/time-series/dist/lib/commands/MREVRANGE_WITHLABELS_GROUPBY.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -25420,13 +25424,13 @@ var require_MREVRANGE_WITHLABELS_GROUPBY = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -25461,7 +25465,7 @@ var require_MREVRANGE_WITHLABELS_GROUPBY = __commonJS({
 var require_MREVRANGE_WITHLABELS = __commonJS({
   "node_modules/@redis/time-series/dist/lib/commands/MREVRANGE_WITHLABELS.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -25470,13 +25474,13 @@ var require_MREVRANGE_WITHLABELS = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -25511,7 +25515,7 @@ var require_MREVRANGE_WITHLABELS = __commonJS({
 var require_MREVRANGE = __commonJS({
   "node_modules/@redis/time-series/dist/lib/commands/MREVRANGE.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -25520,13 +25524,13 @@ var require_MREVRANGE = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -25586,7 +25590,7 @@ var require_QUERYINDEX = __commonJS({
 var require_REVRANGE = __commonJS({
   "node_modules/@redis/time-series/dist/lib/commands/REVRANGE.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -25595,13 +25599,13 @@ var require_REVRANGE = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = exports2 && exports2.__importStar || function(mod) {
@@ -25635,7 +25639,7 @@ var require_REVRANGE = __commonJS({
 var require_commands6 = __commonJS({
   "node_modules/@redis/time-series/dist/lib/commands/index.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -25644,10 +25648,10 @@ var require_commands6 = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
+    }));
     var __exportStar = exports2 && exports2.__exportStar || function(m, exports3) {
       for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports3, p)) __createBinding(exports3, m, p);
     };
@@ -25789,7 +25793,7 @@ var require_lib5 = __commonJS({
 var require_dist2 = __commonJS({
   "node_modules/redis/dist/index.js"(exports2) {
     "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -25798,10 +25802,10 @@ var require_dist2 = __commonJS({
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
+    }));
     var __exportStar = exports2 && exports2.__exportStar || function(m, exports3) {
       for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports3, p)) __createBinding(exports3, m, p);
     };
@@ -26184,7 +26188,7 @@ var require_library = __commonJS({
     });
     var Wi = ne((pE, ia) => {
       "use strict";
-      ia.exports = /* @__PURE__ */ function() {
+      ia.exports = /* @__PURE__ */ (function() {
         function e(r, t, n, i, o) {
           return r < t || n < t ? r > n ? n + 1 : r + 1 : i === o ? t : t + 1;
         }
@@ -26203,7 +26207,7 @@ var require_library = __commonJS({
           for (; a < o; ) for (S = t.charCodeAt(s + (u = a)), f = ++a, l = 0; l < me; l += 2) h = D[l], D[l] = f = e(h, u, f, S, D[l + 1]), u = h;
           return f;
         };
-      }();
+      })();
     });
     var ua = Oo(() => {
       "use strict";
@@ -26333,8 +26337,8 @@ var require_library = __commonJS({
     var Yo = k(require("node:child_process"));
     var di = k(require("node:fs/promises"));
     var Kt = k(require("node:os"));
-    var Oe = Symbol.for("@ts-pattern/matcher");
-    var Wu = Symbol.for("@ts-pattern/isVariadic");
+    var Oe = /* @__PURE__ */ Symbol.for("@ts-pattern/matcher");
+    var Wu = /* @__PURE__ */ Symbol.for("@ts-pattern/isVariadic");
     var Wt = "@ts-pattern/anonymous-select-key";
     var li = (e) => !!(e && typeof e == "object");
     var Qt = (e) => e && !!e[Oe];
@@ -27444,7 +27448,7 @@ Env vars from ${Y(l)} overwrite the ones from ${Y(a)}
       }
       return e.precision -= t, r;
     }
-    var L = /* @__PURE__ */ function() {
+    var L = /* @__PURE__ */ (function() {
       function e(n, i, o) {
         var s, a = 0, l = n.length;
         for (n = n.slice(); l--; ) s = n[l] * i + a, n[l] = s % o | 0, a = s / o | 0;
@@ -27489,7 +27493,7 @@ Env vars from ${Y(l)} overwrite the ones from ${Y(a)}
         }
         return P;
       };
-    }();
+    })();
     function y(e, r, t, n) {
       var i, o, s, a, l, u, c, p, d, f = e.constructor;
       e: if (r != null) {
@@ -27875,7 +27879,7 @@ Env vars from ${Y(l)} overwrite the ones from ${Y(a)}
     function cd(e) {
       return y(e = new this(e), e.e + 1, 1);
     }
-    m[Symbol.for("nodejs.util.inspect.custom")] = m.toString;
+    m[/* @__PURE__ */ Symbol.for("nodejs.util.inspect.custom")] = m.toString;
     m[Symbol.toStringTag] = "Decimal";
     var sr = m.constructor = Ys(Vi);
     pn = new sr(pn);
@@ -28804,7 +28808,7 @@ Note that ${s.bold("include")} statements only accept relation fields.`, a;
     function Or(e) {
       return e instanceof mt;
     }
-    var Rn = Symbol();
+    var Rn = /* @__PURE__ */ Symbol();
     var Hi = /* @__PURE__ */ new WeakMap();
     var Fe = class {
       constructor(r) {
@@ -29021,7 +29025,7 @@ Note that ${s.bold("include")} statements only accept relation fields.`, a;
     function Ra(e) {
       return new On(e);
     }
-    var Ca = Symbol();
+    var Ca = /* @__PURE__ */ Symbol();
     var Et = class {
       constructor(r) {
         if (r !== Ca) throw new Error("Skip instance can not be constructed directly");
@@ -29354,7 +29358,7 @@ Note that ${s.bold("include")} statements only accept relation fields.`, a;
       let r = new Set(e);
       return { getPrototypeOf: () => Object.prototype, getOwnPropertyDescriptor: () => Mn, has: (t, n) => r.has(n), set: (t, n, i) => r.add(n) && Reflect.set(t, n, i), ownKeys: () => [...r] };
     }
-    var Fa = Symbol.for("nodejs.util.inspect.custom");
+    var Fa = /* @__PURE__ */ Symbol.for("nodejs.util.inspect.custom");
     function he(e, r) {
       let t = um(r), n = /* @__PURE__ */ new Set(), i = new Proxy(e, { get(o, s) {
         if (n.has(s)) return o[s];
@@ -29590,7 +29594,7 @@ Prisma Accelerate has built-in connection pooling to prevent such errors: https:
     function Ha(e) {
       return e.replace(/^./, (r) => r.toUpperCase());
     }
-    var lo = Symbol();
+    var lo = /* @__PURE__ */ Symbol();
     function Pt(e) {
       let r = [$m(e), qm(e), re(lo, () => e), re("$parent", () => e._appliedParent)], t = e._extensions.getAllClientExtensions();
       return t && r.push(xt(t)), he(e, r);
@@ -30465,7 +30469,7 @@ ${r}`, C(t, true));
     }
     var vo = k(require("node:os"));
     var Nl = k(require("node:path"));
-    var xo = Symbol("PrismaLibraryEngineCache");
+    var xo = /* @__PURE__ */ Symbol("PrismaLibraryEngineCache");
     function gf() {
       let e = globalThis;
       return e[xo] === void 0 && (e[xo] = {}), e[xo];
@@ -31328,7 +31332,7 @@ ${n}`;
     var rr = N("prisma:client");
     typeof globalThis == "object" && (globalThis.NODE_CLIENT = true);
     var Mf = { requestArgsToMiddlewareArgs: (e) => e, middlewareArgsToRequestArgs: (e) => e };
-    var $f = Symbol.for("prisma.client.transaction.id");
+    var $f = /* @__PURE__ */ Symbol.for("prisma.client.transaction.id");
     var qf = { id: 0, nextId() {
       return ++this.id;
     } };
@@ -31559,8 +31563,8 @@ var require_xxx_client = __commonJS({
     exports2.Prisma = Prisma;
     exports2.$Enums = {};
     Prisma.prismaVersion = {
-      client: "6.11.0",
-      engine: "9c30299f5a0ea26a96790e13f796dc6094db3173"
+      client: "6.11.1",
+      engine: "f40f79ec31188888a2e33acda0ecc8fd10a853a9"
     };
     Prisma.PrismaClientKnownRequestError = PrismaClientKnownRequestError2;
     Prisma.PrismaClientUnknownRequestError = PrismaClientUnknownRequestError2;
@@ -31665,7 +31669,7 @@ var require_xxx_client = __commonJS({
           "value": "prisma-client-js"
         },
         "output": {
-          "value": "D:\\Web D\\PROJECTS\\New folder\\zenbank\\bank\\db\\node_modules\\@prisma\\xxx-client",
+          "value": "C:\\Users\\HP\\ZenBank\\bank-withdrawal-sweeper\\src\\db\\node_modules\\@prisma\\xxx-client",
           "fromEnvVar": null
         },
         "config": {
@@ -31679,20 +31683,21 @@ var require_xxx_client = __commonJS({
           }
         ],
         "previewFeatures": [],
-        "sourceFilePath": "D:\\Web D\\PROJECTS\\New folder\\zenbank\\bank\\db\\prisma\\schema.prisma",
+        "sourceFilePath": "C:\\Users\\HP\\ZenBank\\bank-withdrawal-sweeper\\src\\db\\prisma\\schema.prisma",
         "isCustomOutput": true
       },
       "relativeEnvPaths": {
-        "rootEnvPath": null,
+        "rootEnvPath": "../../../.env",
         "schemaEnvPath": "../../../.env"
       },
       "relativePath": "../../../prisma",
-      "clientVersion": "6.11.0",
-      "engineVersion": "9c30299f5a0ea26a96790e13f796dc6094db3173",
+      "clientVersion": "6.11.1",
+      "engineVersion": "f40f79ec31188888a2e33acda0ecc8fd10a853a9",
       "datasourceNames": [
         "db"
       ],
       "activeProvider": "postgresql",
+      "postinstall": false,
       "inlineDatasources": {
         "db": {
           "url": {
@@ -48158,7 +48163,7 @@ var require_shams = __commonJS({
         return true;
       }
       var obj = {};
-      var sym = Symbol("test");
+      var sym = /* @__PURE__ */ Symbol("test");
       var symObj = Object(sym);
       if (typeof sym === "string") {
         return false;
@@ -48217,7 +48222,7 @@ var require_has_symbols = __commonJS({
       if (typeof origSymbol("foo") !== "symbol") {
         return false;
       }
-      if (typeof Symbol("bar") !== "symbol") {
+      if (typeof /* @__PURE__ */ Symbol("bar") !== "symbol") {
         return false;
       }
       return hasSymbolSham();
@@ -48474,7 +48479,7 @@ var require_get_intrinsic = __commonJS({
     var throwTypeError = function() {
       throw new $TypeError();
     };
-    var ThrowTypeError = $gOPD ? function() {
+    var ThrowTypeError = $gOPD ? (function() {
       try {
         arguments.callee;
         return throwTypeError;
@@ -48485,7 +48490,7 @@ var require_get_intrinsic = __commonJS({
           return throwTypeError;
         }
       }
-    }() : throwTypeError;
+    })() : throwTypeError;
     var hasSymbols = require_has_symbols()();
     var getProto = require_get_proto();
     var $ObjectGPO = require_Object_getPrototypeOf();
@@ -48997,13 +49002,13 @@ var require_utils3 = __commonJS({
     var formats = require_formats();
     var has = Object.prototype.hasOwnProperty;
     var isArray = Array.isArray;
-    var hexTable = function() {
+    var hexTable = (function() {
       var array = [];
       for (var i = 0; i < 256; ++i) {
         array.push("%" + ((i < 16 ? "0" : "") + i.toString(16)).toUpperCase());
       }
       return array;
-    }();
+    })();
     var compactQueue = function compactQueue2(queue) {
       while (queue.length > 1) {
         var item = queue.pop();
@@ -50561,7 +50566,7 @@ var require_ipaddr = __commonJS({
         }
         return defaultName;
       };
-      ipaddr.IPv4 = function() {
+      ipaddr.IPv4 = (function() {
         function IPv4(octets) {
           var k, len, octet;
           if (octets.length !== 4) {
@@ -50646,7 +50651,7 @@ var require_ipaddr = __commonJS({
           return 32 - cidr;
         };
         return IPv4;
-      }();
+      })();
       ipv4Part = "(0?\\d+|0x[a-f0-9]+)";
       ipv4Regexes = {
         fourOctet: new RegExp("^" + ipv4Part + "\\." + ipv4Part + "\\." + ipv4Part + "\\." + ipv4Part + "$", "i"),
@@ -50662,7 +50667,7 @@ var require_ipaddr = __commonJS({
           }
         };
         if (match = string.match(ipv4Regexes.fourOctet)) {
-          return function() {
+          return (function() {
             var k, len, ref, results;
             ref = match.slice(1, 6);
             results = [];
@@ -50671,25 +50676,25 @@ var require_ipaddr = __commonJS({
               results.push(parseIntAuto(part));
             }
             return results;
-          }();
+          })();
         } else if (match = string.match(ipv4Regexes.longValue)) {
           value = parseIntAuto(match[1]);
           if (value > 4294967295 || value < 0) {
             throw new Error("ipaddr: address outside defined range");
           }
-          return function() {
+          return (function() {
             var k, results;
             results = [];
             for (shift = k = 0; k <= 24; shift = k += 8) {
               results.push(value >> shift & 255);
             }
             return results;
-          }().reverse();
+          })().reverse();
         } else {
           return null;
         }
       };
-      ipaddr.IPv6 = function() {
+      ipaddr.IPv6 = (function() {
         function IPv6(parts, zoneId) {
           var i, k, l, len, part, ref;
           if (parts.length === 16) {
@@ -50749,7 +50754,7 @@ var require_ipaddr = __commonJS({
         };
         IPv6.prototype.toNormalizedString = function() {
           var addr, part, suffix;
-          addr = function() {
+          addr = (function() {
             var k, len, ref, results;
             ref = this.parts;
             results = [];
@@ -50758,7 +50763,7 @@ var require_ipaddr = __commonJS({
               results.push(part.toString(16));
             }
             return results;
-          }.call(this).join(":");
+          }).call(this).join(":");
           suffix = "";
           if (this.zoneId) {
             suffix = "%" + this.zoneId;
@@ -50767,7 +50772,7 @@ var require_ipaddr = __commonJS({
         };
         IPv6.prototype.toFixedLengthString = function() {
           var addr, part, suffix;
-          addr = function() {
+          addr = (function() {
             var k, len, ref, results;
             ref = this.parts;
             results = [];
@@ -50776,7 +50781,7 @@ var require_ipaddr = __commonJS({
               results.push(part.toString(16).padStart(4, "0"));
             }
             return results;
-          }.call(this).join(":");
+          }).call(this).join(":");
           suffix = "";
           if (this.zoneId) {
             suffix = "%" + this.zoneId;
@@ -50861,7 +50866,7 @@ var require_ipaddr = __commonJS({
           return 128 - cidr;
         };
         return IPv6;
-      }();
+      })();
       ipv6Part = "(?:[0-9a-f]+::?)+";
       zoneIndex = "%[0-9a-z]{1,}";
       ipv6Regexes = {
@@ -50905,7 +50910,7 @@ var require_ipaddr = __commonJS({
         if (string[string.length - 1] === ":") {
           string = string.slice(0, -1);
         }
-        parts = function() {
+        parts = (function() {
           var k, len, ref, results;
           ref = string.split(":");
           results = [];
@@ -50914,7 +50919,7 @@ var require_ipaddr = __commonJS({
             results.push(parseInt(part, 16));
           }
           return results;
-        }();
+        })();
         return {
           parts,
           zoneId
@@ -55281,12 +55286,12 @@ var import_express = __toESM(require_express2());
 var app = (0, import_express.default)();
 var PORT = process.env.PORT;
 var redisclient = (0, import_redis.createClient)({
-  url: process.env.REDIS_URL,
-  socket: {
-    tls: true,
-    rejectUnauthorized: false,
-    host: "inspired-wahoo-12970.upstash.io"
-  }
+  url: process.env.REDIS_URL
+  // socket: {
+  //   tls: true,
+  //   rejectUnauthorized: false,
+  //   host: "inspired-wahoo-12970.upstash.io",
+  // }
 });
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
