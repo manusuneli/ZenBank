@@ -18,7 +18,7 @@ export async function POST(req: Request) {
   const referer = req.headers.get("referer");
 
   const allowedOrigins = [
-    "https://user-zenpay-payments.vercel.app",
+    "https://zenpay-payment-app.vercel.app",
     "http://localhost:3000"
   ];
 
@@ -32,7 +32,7 @@ export async function POST(req: Request) {
   }
 
   if (
-    !referer?.startsWith("https://user-zenpay-payments.vercel.app/") &&
+    !referer?.startsWith("https://zenpay-payment-app.vercel.app/") &&
     !referer?.startsWith("http://localhost:3000/")
   ) {
     return new NextResponse(JSON.stringify({ error: "Invalid referer path" }), {
