@@ -55287,11 +55287,9 @@ var app = (0, import_express.default)();
 var PORT = process.env.PORT;
 var redisclient = (0, import_redis.createClient)({
   url: process.env.REDIS_URL
-  // socket: {
-  //   tls: true,
-  //   rejectUnauthorized: false,
-  //   host: "inspired-wahoo-12970.upstash.io",
-  // }
+});
+redisclient.on("error", (err) => {
+  console.error("Redis Client Error:", err);
 });
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));

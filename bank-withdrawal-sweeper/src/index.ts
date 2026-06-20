@@ -7,11 +7,10 @@ const PORT = process.env.PORT;
 
 export const redisclient = createClient({
   url: process.env.REDIS_URL,
-  // socket: {
-  //   tls: true,
-  //   rejectUnauthorized: false,
-  //   host: "inspired-wahoo-12970.upstash.io",
-  // }
+});
+
+redisclient.on("error", (err) => {
+  console.error("Redis Client Error:", err);
 });
 
 

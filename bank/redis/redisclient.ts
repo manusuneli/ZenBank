@@ -1,12 +1,18 @@
 import { createClient } from "redis"
 
-const redisUrl = process.env.REDIS_URL
-// console.log(redisUrl);
-export const redisclient = createClient ({
-    url : process.env.REDIS_URL
-});
-redisclient.on("error", function(err) {
-  console.error("Redis error:", err);
+const redisUrl = process.env.REDIS_URL;
+
+export const redisclient = createClient({
+  url: redisUrl
 });
 
-await redisclient.connect()
+redisclient.on("error", function (err) {
+  console.error("Redis client connection error:", err);
+});
+
+// Replace 'await redisclient.connect()' with this safe check:
+if (!redisclient.isOpen) {
+  redisclient.connect().catch((err) => {
+    console.error("Failed to connect to Redis:", err);
+  });
+}
